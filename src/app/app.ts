@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { SeoService } from './services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,11 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
+  private readonly seoService = inject(SeoService);
+
   protected readonly title = signal('fairport-oktoberfest');
+
+  ngOnInit(): void {
+    this.seoService.init();
+  }
 }
