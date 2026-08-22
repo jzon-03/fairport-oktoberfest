@@ -1,0 +1,62 @@
+.schedule-header {
+	background:
+		radial-gradient(circle at 18% 20%, rgba(255, 193, 7, 0.18), transparent 45%),
+		radial-gradient(circle at 80% 30%, rgba(13, 110, 253, 0.14), transparent 50%),
+		linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.schedule-hero {
+	background: linear-gradient(120deg, #0d6efd, #6610f2);
+	box-shadow: 0 1rem 2.5rem rgba(13, 110, 253, 0.24);
+}
+
+.header-kicker {
+	letter-spacing: 0.07em;
+}
+
+.hero-copy {
+	max-width: 68ch;
+}
+
+.schedule-hero .h5 {
+	opacity: 0.92;
+}
+
+.day-card {
+	border: 1px solid rgba(33, 37, 41, 0.08);
+	background: #ffffff;
+	box-shadow: 0 0.6rem 1.6rem rgba(33, 37, 41, 0.06);
+}
+
+.day-theme {
+	padding: 0.55rem 0.9rem;
+}
+
+.event-row {
+	border: 1px solid rgba(13, 110, 253, 0.14);
+	background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+.event-row p {
+	line-height: 1.45;
+}
+
+.event-time {
+	font-weight: 700;
+	color: #0d6efd;
+}
+
+.location-tag {
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: #212529;
+}
+
+.note-panel {
+	border: 1px solid rgba(25, 135, 84, 0.25);
+	background: linear-gradient(180deg, #ffffff, #f5fff8);
+}
+
+ul li::marker {
+	color: #0d6efd;
+}

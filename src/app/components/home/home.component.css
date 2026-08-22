@@ -20,14 +20,39 @@
 	max-width: 62ch;
 }
 
+.feature-overlap {
+	margin-top: -3.25rem;
+	position: relative;
+	z-index: 2;
+}
+
 .feature-card {
 	transition: transform 200ms ease, box-shadow 200ms ease;
+	border: 1px solid rgba(33, 37, 41, 0.08);
+}
+
+.card-blue {
+	background-color: rgba(173, 216, 230, 0.5);
+}
+
+.card-orange {
+	background-color: rgba(255, 204, 153, 0.5);
+}
+
+.card-yellow {
+	background-color: rgba(255, 243, 166, 0.5);
 }
 
 .feature-card:hover,
 .feature-card:focus-within {
 	transform: translateY(-4px);
 	box-shadow: 0 1rem 2.1rem rgba(33, 37, 41, 0.12) !important;
+}
+
+@media (max-width: 991.98px) {
+	.feature-overlap {
+		margin-top: -1.5rem;
+	}
 }
 
 .quick-info {

@@ -16,12 +16,17 @@
 	</div>
 </section>
 
-<section class="pb-5">
+<section class="pb-5 feature-overlap">
 	<div class="container-xl">
 		<div class="row g-4">
-			@for (card of highlightCards; track card.title) {
+			@for (card of highlightCards; track card.title; let i = $index) {
 				<div class="col-12 col-md-6 col-lg-4 d-flex">
-					<article class="card border-0 shadow-sm h-100 w-100 feature-card">
+					<article
+						class="card border-0 shadow-sm h-100 w-100 feature-card"
+						[class.card-blue]="i === 0"
+						[class.card-orange]="i === 1"
+						[class.card-yellow]="i === 2"
+					>
 						<div class="card-body p-4 d-flex flex-column">
 							<h2 class="h4 card-title mb-2">{{ card.title }}</h2>
 							<p class="card-text text-body-secondary mb-4">{{ card.description }}</p>

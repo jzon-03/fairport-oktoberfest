@@ -1,1 +1,125 @@
-<p>schedule works!</p>
+<section class="schedule-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 schedule-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 header-kicker">Celebrating our {{ eventYear }}! Prost!</p>
+			<h1 class="display-6 fw-bold mb-3">{{ eventName }}</h1>
+			<p class="h5 mb-3">{{ eventDates }}</p>
+			<p class="lead mb-0 hero-copy">
+				A family-friendly weekend full of tradition and community fun along the Erie Canal at Fairport
+				Junction.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4 mb-4">
+			<div class="col-12 col-lg-7">
+				<article class="day-card rounded-4 p-3 p-md-4 h-100">
+					<h2 class="h4 mb-3">Admission & Hours</h2>
+					<div class="row g-3">
+						@for (window of admissionWindows; track window.dayLabel) {
+							<div class="col-12">
+								<div class="event-row p-3 rounded-3">
+									<p class="mb-1 fw-semibold">{{ window.dayLabel }}</p>
+									<p class="mb-1 text-body-secondary">{{ window.hours }}</p>
+									<p class="mb-0">{{ window.pricing }}</p>
+									@if (window.note) {
+										<p class="mb-0 mt-1 small text-body-secondary">{{ window.note }}</p>
+									}
+								</div>
+							</div>
+						}
+					</div>
+					<p class="mt-3 mb-0 fw-semibold">{{ advancePrice }}</p>
+				</article>
+			</div>
+
+			<div class="col-12 col-lg-5">
+				<article class="day-card rounded-4 p-3 p-md-4 h-100">
+					<h2 class="h4 mb-3">Festival Location</h2>
+					<p class="mb-1 fw-semibold">{{ locationName }}</p>
+					<p class="mb-3 text-body-secondary">Use address: {{ locationAddress }}</p>
+					<a
+						href="{{ parkingUrl }}"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn btn-outline-primary"
+					>
+						Village of Fairport Parking Information
+					</a>
+				</article>
+			</div>
+		</div>
+
+		<article class="day-card rounded-4 p-3 p-md-4 mb-4">
+			<h2 class="h4 mb-3">Festival Highlights</h2>
+			<p class="mb-3">
+				Fairport Oktoberfest returns for its 17th year with authentic German cuisine, bier, lively polka
+				bands, traditional dancing, local vendors, and festive entertainment under the big tent.
+			</p>
+			<p class="mb-0">
+				Then stick around as Oktoberfest becomes ROCtoberfest featuring
+				@for (band of featuredBands; track band.name) {
+					<a
+						href="{{ band.url }}"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="link-primary fw-semibold text-decoration-none"
+					>
+						{{ band.name }}</a
+					>{{ $last ? '.' : ', ' }}
+				}
+			</p>
+		</article>
+
+		@for (day of festivalDays; track day.dayLabel) {
+			<article class="day-card rounded-4 p-3 p-md-4 mb-4">
+				<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-3">
+					<div>
+						<h2 class="h3 mb-1">{{ day.dayLabel }}</h2>
+						<p class="mb-0 text-body-secondary">{{ day.dateLabel }}</p>
+					</div>
+					<span class="badge text-bg-primary fs-6 fw-medium day-theme">{{ day.theme }}</span>
+				</div>
+
+				<div class="row g-3">
+					@for (item of day.items; track item.time + item.title) {
+						<div class="col-12">
+							<div class="event-row p-3 rounded-3">
+								<div class="row g-3 align-items-start">
+									<div class="col-12 col-md-2">
+										<p class="event-time mb-0">{{ item.time }}</p>
+									</div>
+									<div class="col-12 col-md-10">
+										<h3 class="h5 mb-1">{{ item.title }}</h3>
+										<p class="mb-2 location-tag">{{ item.location }}</p>
+										<p class="mb-0 text-body-secondary">{{ item.details }}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					}
+				</div>
+			</article>
+		}
+
+		<article class="day-card rounded-4 p-3 p-md-4 mb-4">
+			<h2 class="h4 mb-3">Fast Facts</h2>
+			<ul class="mb-0 ps-3">
+				@for (fact of fastFacts; track fact) {
+					<li class="mb-2">{{ fact }}</li>
+				}
+			</ul>
+		</article>
+
+		<div class="mt-4 p-4 rounded-4 note-panel">
+			<p class="mb-0">
+				Schedule is subject to updates. Check
+				<a routerLink="/contact" class="text-decoration-none fw-semibold">Contact</a>
+				for same-day changes and event announcements.
+			</p>
+		</div>
+	</div>
+</section>
