@@ -7,9 +7,10 @@
 
 .hero-jumbotron {
 	background:
-		linear-gradient(135deg, rgba(13, 110, 253, 0.9), rgba(25, 135, 84, 0.88)),
-		linear-gradient(20deg, #0d6efd, #198754);
+		linear-gradient(135deg, rgba(12, 30, 56, 0.68), rgba(18, 66, 50, 0.64)),
+		url('/hero-bg.webp') center / cover no-repeat;
 	box-shadow: 0 1rem 2.2rem rgba(13, 110, 253, 0.24);
+	border: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .hero-kicker {
