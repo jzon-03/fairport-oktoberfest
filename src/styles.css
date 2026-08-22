@@ -6,3 +6,49 @@ app-root {
 	display: block;
 	animation: fadeIn 600ms ease-in both;
 }
+
+.card,
+.feature-card,
+.act-card,
+.dish-card,
+.vendor-card,
+.activity-card,
+.about-card,
+.sponsor-card,
+.volunteer-card,
+.contact-card,
+.day-card,
+.section-card,
+.category-block,
+.location-panel,
+.day-block,
+.event-row,
+.slot-row,
+.drink-row,
+.tip-row {
+	background: linear-gradient(180deg, #1f2937, #111827) !important;
+	border-color: rgba(148, 163, 184, 0.32) !important;
+	color: #e5e7eb;
+}
+
+.card .text-body-secondary,
+.feature-card .text-body-secondary,
+.act-card .text-body-secondary,
+.dish-card .text-body-secondary,
+.vendor-card .text-body-secondary,
+.activity-card .text-body-secondary,
+.about-card .text-body-secondary,
+.sponsor-card .text-body-secondary,
+.volunteer-card .text-body-secondary,
+.contact-card .text-body-secondary,
+.day-card .text-body-secondary,
+.section-card .text-body-secondary,
+.category-block .text-body-secondary,
+.location-panel .text-body-secondary,
+.day-block .text-body-secondary,
+.event-row .text-body-secondary,
+.slot-row .text-body-secondary,
+.drink-row .text-body-secondary,
+.tip-row .text-body-secondary {
+	color: rgba(226, 232, 240, 0.86) !important;
+}
