@@ -1,1 +1,53 @@
-<p>home works!</p>
+<section class="hero-wrap py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 hero-jumbotron text-white">
+			<p class="text-uppercase fw-semibold mb-2 hero-kicker">September in Fairport</p>
+			<h1 class="display-5 fw-bold mb-3">Fairport Oktoberfest</h1>
+			<p class="lead mb-4 hero-copy">
+				Celebrate the season with live music, great food, local vendors, and family activities in the heart of
+				Fairport.
+			</p>
+
+			<div class="d-flex flex-column flex-sm-row gap-2 gap-sm-3">
+				<a class="btn btn-warning btn-lg fw-semibold" routerLink="/schedule">View Schedule</a>
+				<a class="btn btn-outline-light btn-lg" routerLink="/volunteer">Volunteer</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4">
+			@for (card of highlightCards; track card.title) {
+				<div class="col-12 col-md-6 col-lg-4 d-flex">
+					<article class="card border-0 shadow-sm h-100 w-100 feature-card">
+						<div class="card-body p-4 d-flex flex-column">
+							<h2 class="h4 card-title mb-2">{{ card.title }}</h2>
+							<p class="card-text text-body-secondary mb-4">{{ card.description }}</p>
+							<a class="btn btn-outline-primary mt-auto align-self-start" [routerLink]="card.route">{{ card.cta }}</a>
+						</div>
+					</article>
+				</div>
+			}
+		</div>
+
+		<div class="mt-5 p-4 p-lg-5 rounded-4 quick-info">
+			<h2 class="h3 mb-3">Quick Event Info</h2>
+			<div class="row g-3">
+				<div class="col-12 col-md-4">
+					<p class="mb-1 fw-semibold">Where</p>
+					<p class="mb-0 text-body-secondary">Fairport Village Center</p>
+				</div>
+				<div class="col-12 col-md-4">
+					<p class="mb-1 fw-semibold">When</p>
+					<p class="mb-0 text-body-secondary">Friday through Sunday</p>
+				</div>
+				<div class="col-12 col-md-4">
+					<p class="mb-1 fw-semibold">Questions?</p>
+					<a class="link-primary text-decoration-none" routerLink="/contact">Contact the team</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
