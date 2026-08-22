@@ -1,0 +1,64 @@
+.entertainment-header {
+	background:
+		radial-gradient(circle at 12% 22%, rgba(25, 135, 84, 0.18), transparent 45%),
+		radial-gradient(circle at 84% 25%, rgba(255, 193, 7, 0.18), transparent 50%),
+		linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.entertainment-hero {
+	background: linear-gradient(120deg, #198754, #0d6efd);
+	box-shadow: 0 1rem 2.4rem rgba(25, 135, 84, 0.24);
+}
+
+.hero-kicker {
+	letter-spacing: 0.08em;
+}
+
+.hero-copy {
+	max-width: 68ch;
+}
+
+.featured-row {
+	margin-top: -2.25rem;
+	position: relative;
+	z-index: 2;
+}
+
+.act-card {
+	border: 1px solid rgba(33, 37, 41, 0.08);
+	background: linear-gradient(180deg, #ffffff, #f8fbff);
+	transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.act-card:hover,
+.act-card:focus-within {
+	transform: translateY(-4px);
+	box-shadow: 0 1rem 2.2rem rgba(33, 37, 41, 0.12) !important;
+}
+
+.day-block {
+	border: 1px solid rgba(33, 37, 41, 0.08);
+	background: #ffffff;
+	box-shadow: 0 0.6rem 1.6rem rgba(33, 37, 41, 0.06);
+}
+
+.slot-row {
+	border: 1px solid rgba(13, 110, 253, 0.14);
+	background: linear-gradient(180deg, #ffffff, #f8fbff);
+}
+
+.slot-time {
+	font-weight: 700;
+	color: #0d6efd;
+}
+
+.stage-label {
+	font-size: 0.95rem;
+	font-weight: 600;
+}
+
+@media (max-width: 991.98px) {
+	.featured-row {
+		margin-top: -1rem;
+	}
+}

@@ -1,1 +1,71 @@
-<p>entertainment works!</p>
+<section class="entertainment-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 entertainment-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 hero-kicker">ROCtoberfest Lineup</p>
+			<h1 class="display-6 fw-bold mb-3">Entertainment</h1>
+			<p class="lead mb-0 hero-copy">
+				From traditional Oktoberfest sounds to local night-time favorites, the Fairport stages stay lively all weekend.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4 featured-row">
+			@for (act of featuredActs; track act.name) {
+				<div class="col-12 col-md-6 col-xl-4 d-flex">
+					<article class="card border-0 shadow-sm h-100 w-100 act-card">
+						<div class="card-body p-4 d-flex flex-column">
+							<p class="small text-uppercase fw-semibold mb-2 text-primary">Featured Act</p>
+							<h2 class="h4 mb-1">{{ act.name }}</h2>
+							<p class="mb-3 text-body-secondary">{{ act.subtitle }}</p>
+							<p class="mb-4">{{ act.description }}</p>
+							<a
+								class="btn btn-outline-primary mt-auto align-self-start"
+								href="{{ act.link }}"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								{{ act.cta }}
+							</a>
+						</div>
+					</article>
+				</div>
+			}
+		</div>
+
+		<div class="mt-5">
+			@for (day of entertainmentDays; track day.day) {
+				<article class="day-block rounded-4 p-3 p-md-4 mb-4">
+					<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-3">
+						<div>
+							<h2 class="h3 mb-1">{{ day.day }}</h2>
+							<p class="mb-0 text-body-secondary">{{ day.date }}</p>
+						</div>
+						<span class="badge text-bg-primary fs-6 fw-medium">{{ day.vibe }}</span>
+					</div>
+
+					<div class="row g-3">
+						@for (slot of day.slots; track slot.time + slot.act) {
+							<div class="col-12">
+								<div class="slot-row p-3 rounded-3">
+									<div class="row g-3 align-items-start">
+										<div class="col-12 col-md-3 col-lg-2">
+											<p class="slot-time mb-0">{{ slot.time }}</p>
+										</div>
+										<div class="col-12 col-md-9 col-lg-10">
+											<h3 class="h5 mb-1">{{ slot.act }}</h3>
+											<p class="mb-2 stage-label">{{ slot.stage }}</p>
+											<p class="mb-0 text-body-secondary">{{ slot.details }}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						}
+					</div>
+				</article>
+			}
+		</div>
+	</div>
+</section>
