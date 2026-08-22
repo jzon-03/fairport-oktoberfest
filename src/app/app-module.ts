@@ -16,6 +16,7 @@ import { SponsorsComponent } from './components/sponsors/sponsors.component';
 import { VolunteerComponent } from './components/volunteer/volunteer.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { RootComponent } from './components/root/root.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ContactComponent } from './components/contact/contact.component';
     VolunteerComponent,
     GalleryComponent,
     ContactComponent,
+    RootComponent,
   ],
   imports: [
     BrowserModule,

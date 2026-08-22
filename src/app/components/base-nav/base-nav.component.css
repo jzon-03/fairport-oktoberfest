@@ -1,0 +1,17 @@
+.nav-shell {
+	max-width: 1200px;
+}
+
+.navbar-brand {
+	letter-spacing: 0.02em;
+}
+
+.nav-link {
+	font-weight: 500;
+	border-radius: 0.5rem;
+	padding-inline: 0.75rem;
+}
+
+.nav-link.active {
+	background-color: rgba(13, 110, 253, 0.12);
+}
