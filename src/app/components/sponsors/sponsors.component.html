@@ -1,1 +1,33 @@
-<p>sponsors works!</p>
+<section class="sponsors-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 sponsors-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 header-kicker">Thank You</p>
+			<h1 class="display-6 fw-bold mb-3">Sponsors</h1>
+			<p class="lead mb-0 hero-copy">
+				Fairport Oktoberfest is made possible by community organizations, local partners, and dedicated supporters.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4">
+			@for (tier of tiers; track tier.tier) {
+				<div class="col-12 col-lg-4 d-flex">
+					<article class="card border-0 shadow-sm h-100 w-100 sponsor-card">
+						<div class="card-body p-4 d-flex flex-column">
+							<h2 class="h4 mb-2">{{ tier.tier }}</h2>
+							<p class="text-body-secondary mb-3">{{ tier.description }}</p>
+							<ul class="mb-0 ps-3 mt-auto">
+								@for (org of tier.organizations; track org) {
+									<li class="mb-2">{{ org }}</li>
+								}
+							</ul>
+						</div>
+					</article>
+				</div>
+			}
+		</div>
+	</div>
+</section>

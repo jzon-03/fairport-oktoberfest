@@ -1,0 +1,28 @@
+.sponsors-header {
+	background:
+		radial-gradient(circle at 14% 20%, rgba(25, 135, 84, 0.18), transparent 44%),
+		radial-gradient(circle at 80% 24%, rgba(13, 110, 253, 0.16), transparent 50%),
+		linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.sponsors-hero {
+	background: linear-gradient(125deg, #198754, #0d6efd);
+	box-shadow: 0 1rem 2.4rem rgba(25, 135, 84, 0.24);
+}
+
+.header-kicker {
+	letter-spacing: 0.08em;
+}
+
+.hero-copy {
+	max-width: 68ch;
+}
+
+.sponsor-card {
+	border: 1px solid rgba(25, 135, 84, 0.18);
+	background: linear-gradient(180deg, #ffffff, #f4fff8);
+}
+
+li::marker {
+	color: #198754;
+}

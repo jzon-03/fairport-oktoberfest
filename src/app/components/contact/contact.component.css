@@ -1,0 +1,24 @@
+.contact-header {
+	background:
+		radial-gradient(circle at 14% 20%, rgba(13, 110, 253, 0.16), transparent 44%),
+		radial-gradient(circle at 82% 24%, rgba(255, 193, 7, 0.16), transparent 50%),
+		linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.contact-hero {
+	background: linear-gradient(125deg, #0d6efd, #fd7e14);
+	box-shadow: 0 1rem 2.4rem rgba(13, 110, 253, 0.24);
+}
+
+.header-kicker {
+	letter-spacing: 0.08em;
+}
+
+.hero-copy {
+	max-width: 62ch;
+}
+
+.contact-card {
+	border: 1px solid rgba(13, 110, 253, 0.16);
+	background: linear-gradient(180deg, #ffffff, #f6f9ff);
+}

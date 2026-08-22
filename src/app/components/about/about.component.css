@@ -1,0 +1,29 @@
+.about-header {
+	background:
+		radial-gradient(circle at 14% 20%, rgba(255, 193, 7, 0.18), transparent 44%),
+		radial-gradient(circle at 82% 24%, rgba(220, 53, 69, 0.14), transparent 50%),
+		linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.about-hero {
+	background: linear-gradient(125deg, #dc3545, #fd7e14);
+	box-shadow: 0 1rem 2.4rem rgba(220, 53, 69, 0.24);
+}
+
+.header-kicker {
+	letter-spacing: 0.08em;
+}
+
+.hero-copy {
+	max-width: 68ch;
+}
+
+.about-card {
+	border: 1px solid rgba(220, 53, 69, 0.14);
+	background: linear-gradient(180deg, #ffffff, #fff8f5);
+}
+
+.about-note {
+	border: 1px solid rgba(253, 126, 20, 0.24);
+	background: linear-gradient(180deg, #ffffff, #fffaf2);
+}

@@ -1,0 +1,36 @@
+.activities-header {
+	background:
+		radial-gradient(circle at 16% 20%, rgba(13, 110, 253, 0.16), transparent 45%),
+		radial-gradient(circle at 80% 30%, rgba(25, 135, 84, 0.14), transparent 50%),
+		linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.activities-hero {
+	background: linear-gradient(120deg, #0d6efd, #198754);
+	box-shadow: 0 1rem 2.2rem rgba(13, 110, 253, 0.24);
+}
+
+.header-kicker {
+	letter-spacing: 0.08em;
+}
+
+.hero-copy {
+	max-width: 68ch;
+}
+
+.activity-card {
+	border: 1px solid rgba(13, 110, 253, 0.14);
+	background: linear-gradient(180deg, #ffffff, #f6faff);
+	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.activity-card:hover,
+.activity-card:focus-within {
+	transform: translateY(-4px);
+	box-shadow: 0 1rem 2rem rgba(33, 37, 41, 0.1) !important;
+}
+
+.activity-meta {
+	font-weight: 600;
+	color: #0d6efd;
+}

@@ -1,1 +1,70 @@
-<p>food-drink works!</p>
+<section class="food-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 food-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 hero-kicker">Taste Oktoberfest</p>
+			<h1 class="display-6 fw-bold mb-3">Food & Drink</h1>
+			<p class="lead mb-0 hero-copy">
+				From traditional German favorites to local crowd-pleasers, the festival menu is built for all-day
+				celebration.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<article class="section-card rounded-4 p-3 p-md-4 mb-4">
+			<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-3">
+				<div>
+					<h2 class="h3 mb-1">Featured Dishes</h2>
+					<p class="mb-0 text-body-secondary">Festival classics, hearty meals, and sweet treats.</p>
+				</div>
+			</div>
+
+			<div class="row g-3">
+				@for (item of featuredDishes; track item.name) {
+					<div class="col-12 col-md-6 col-xl-4 d-flex">
+						<article class="card border-0 shadow-sm h-100 w-100 dish-card">
+							<div class="card-body p-4 d-flex flex-column">
+								<span class="badge text-bg-primary align-self-start mb-2">{{ item.tag }}</span>
+								<h3 class="h5 mb-1">{{ item.name }}</h3>
+								<p class="vendor-label mb-2">{{ item.vendor }}</p>
+								<p class="mb-0 text-body-secondary">{{ item.description }}</p>
+							</div>
+						</article>
+					</div>
+				}
+			</div>
+		</article>
+
+		<div class="row g-4">
+			<div class="col-12 col-lg-7">
+				<article class="section-card rounded-4 p-3 p-md-4 h-100">
+					<h2 class="h3 mb-3">Beverage Highlights</h2>
+					<div class="row g-3">
+						@for (drink of beverageHighlights; track drink.name) {
+							<div class="col-12">
+								<div class="drink-row p-3 rounded-3">
+									<h3 class="h5 mb-1">{{ drink.name }}</h3>
+									<p class="drink-style mb-1">{{ drink.style }}</p>
+									<p class="mb-0 text-body-secondary">{{ drink.details }}</p>
+								</div>
+							</div>
+						}
+					</div>
+				</article>
+			</div>
+
+			<div class="col-12 col-lg-5">
+				<article class="section-card rounded-4 p-3 p-md-4 h-100">
+					<h2 class="h3 mb-3">Service Notes</h2>
+					<ul class="mb-0 ps-3">
+						@for (note of serviceNotes; track note) {
+							<li class="mb-2">{{ note }}</li>
+						}
+					</ul>
+				</article>
+			</div>
+		</div>
+	</div>
+</section>

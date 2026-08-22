@@ -1,0 +1,31 @@
+.site-footer {
+	background:
+		linear-gradient(135deg, rgba(13, 110, 253, 0.96), rgba(102, 16, 242, 0.95)),
+		linear-gradient(180deg, #0b5ed7, #6610f2);
+	color: #f8f9fa;
+}
+
+.footer-copy {
+	max-width: 48ch;
+	color: rgba(248, 249, 250, 0.9);
+}
+
+.footer-heading {
+	letter-spacing: 0.06em;
+	color: rgba(255, 255, 255, 0.88);
+}
+
+.footer-link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+	color: #ffe082;
+	text-decoration: underline;
+}
+
+.footer-divider {
+	border-color: rgba(255, 255, 255, 0.25);
+}

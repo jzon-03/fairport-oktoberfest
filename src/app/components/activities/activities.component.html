@@ -1,1 +1,31 @@
-<p>activities works!</p>
+<section class="activities-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 activities-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 header-kicker">Hands-On Fun</p>
+			<h1 class="display-6 fw-bold mb-3">Activities</h1>
+			<p class="lead mb-0 hero-copy">
+				Family-friendly challenges, German traditions, and interactive spaces keep the festival moving all weekend.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4">
+			@for (block of activityBlocks; track block.title) {
+				<div class="col-12 col-md-6 d-flex">
+					<article class="card border-0 shadow-sm h-100 w-100 activity-card">
+						<div class="card-body p-4 d-flex flex-column">
+							<p class="small text-uppercase fw-semibold text-primary mb-2">{{ block.audience }}</p>
+							<h2 class="h4 mb-2">{{ block.title }}</h2>
+							<p class="text-body-secondary mb-3">{{ block.description }}</p>
+							<p class="mb-1 activity-meta">{{ block.time }}</p>
+							<p class="mb-0 activity-meta">{{ block.location }}</p>
+						</div>
+					</article>
+				</div>
+			}
+		</div>
+	</div>
+</section>

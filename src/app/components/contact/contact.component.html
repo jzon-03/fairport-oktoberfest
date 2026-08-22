@@ -1,1 +1,31 @@
-<p>contact works!</p>
+<section class="contact-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 contact-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 header-kicker">Get In Touch</p>
+			<h1 class="display-6 fw-bold mb-3">Contact</h1>
+			<p class="lead mb-0 hero-copy">
+				Reach out for event updates, participation, and support questions.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4">
+			@for (channel of channels; track channel.title) {
+				<div class="col-12 col-lg-4 d-flex">
+					<article class="card border-0 shadow-sm h-100 w-100 contact-card">
+						<div class="card-body p-4 d-flex flex-column">
+							<h2 class="h4 mb-2">{{ channel.title }}</h2>
+							<p class="text-body-secondary mb-4">{{ channel.detail }}</p>
+							<a class="btn btn-outline-primary mt-auto align-self-start" href="{{ channel.actionHref }}">
+								{{ channel.actionLabel }}
+							</a>
+						</div>
+					</article>
+				</div>
+			}
+		</div>
+	</div>
+</section>

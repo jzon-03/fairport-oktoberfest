@@ -1,1 +1,37 @@
-<p>volunteer works!</p>
+<section class="volunteer-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 volunteer-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 header-kicker">Join The Team</p>
+			<h1 class="display-6 fw-bold mb-3">Volunteer</h1>
+			<p class="lead mb-0 hero-copy">
+				Help bring Fairport Oktoberfest to life by supporting guests, activities, and daily operations.
+			</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4">
+			@for (role of roles; track role.role) {
+				<div class="col-12 col-md-6 d-flex">
+					<article class="card border-0 shadow-sm h-100 w-100 volunteer-card">
+						<div class="card-body p-4 d-flex flex-column">
+							<h2 class="h4 mb-1">{{ role.role }}</h2>
+							<p class="role-shift mb-3">{{ role.shift }}</p>
+							<p class="mb-0 text-body-secondary">{{ role.summary }}</p>
+						</div>
+					</article>
+				</div>
+			}
+		</div>
+
+		<div class="mt-4 p-4 rounded-4 volunteer-note">
+			<p class="mb-0">
+				Interested in volunteering? Use the
+				<a routerLink="/contact" class="fw-semibold text-decoration-none">Contact</a>
+				page to get connected with organizers.
+			</p>
+		</div>
+	</div>
+</section>

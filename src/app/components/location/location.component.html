@@ -1,1 +1,40 @@
-<p>location works!</p>
+<section class="location-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 location-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 header-kicker">Plan Your Visit</p>
+			<h1 class="display-6 fw-bold mb-3">Location</h1>
+			<p class="lead mb-0 hero-copy">Find us along the Erie Canal in the heart of Fairport.</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4">
+			<div class="col-12 col-lg-7">
+				<article class="location-panel rounded-4 p-4 h-100">
+					<h2 class="h4 mb-2">{{ venueName }}</h2>
+					<p class="mb-3 text-body-secondary">Use this address for navigation:</p>
+					<p class="address-line mb-4">{{ venueAddress }}</p>
+					<a href="{{ parkingUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">
+						Village Parking Information
+					</a>
+				</article>
+			</div>
+
+			<div class="col-12 col-lg-5">
+				<article class="location-panel rounded-4 p-4 h-100">
+					<h2 class="h4 mb-3">Visit Tips</h2>
+					<div class="d-grid gap-3">
+						@for (tip of tips; track tip.title) {
+							<div class="tip-row p-3 rounded-3">
+								<h3 class="h6 mb-1">{{ tip.title }}</h3>
+								<p class="mb-0 text-body-secondary">{{ tip.detail }}</p>
+							</div>
+						}
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+</section>

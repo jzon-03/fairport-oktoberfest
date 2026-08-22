@@ -1,1 +1,32 @@
-<p>about works!</p>
+<section class="about-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 about-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 header-kicker">Our Story</p>
+			<h1 class="display-6 fw-bold mb-3">About Fairport Oktoberfest</h1>
+			<p class="lead mb-0 hero-copy">{{ story }}</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4">
+			@for (point of aboutPoints; track point.title) {
+				<div class="col-12 col-md-4 d-flex">
+					<article class="card border-0 shadow-sm h-100 w-100 about-card">
+						<div class="card-body p-4">
+							<h2 class="h4 mb-2">{{ point.title }}</h2>
+							<p class="mb-0 text-body-secondary">{{ point.description }}</p>
+						</div>
+					</article>
+				</div>
+			}
+		</div>
+
+		<div class="mt-4 p-4 rounded-4 about-note">
+			<p class="mb-0">
+				Hosted by the Fairport Perinton Partnership 501(c)(3), with support from local community partners and volunteers.
+			</p>
+		</div>
+	</div>
+</section>

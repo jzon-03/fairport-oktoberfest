@@ -1,1 +1,25 @@
-<p>gallery works!</p>
+<section class="gallery-header py-4 py-lg-5">
+	<div class="container-xl">
+		<div class="p-4 p-md-5 rounded-4 gallery-hero text-white">
+			<p class="text-uppercase fw-semibold mb-2 header-kicker">Festival Highlights</p>
+			<h1 class="display-6 fw-bold mb-3">Gallery</h1>
+			<p class="lead mb-0 hero-copy">A visual snapshot of the moments that define Fairport Oktoberfest.</p>
+		</div>
+	</div>
+</section>
+
+<section class="pb-5">
+	<div class="container-xl">
+		<div class="row g-4">
+			@for (tile of tiles; track tile.title) {
+				<div class="col-12 col-md-6 col-xl-4 d-flex">
+					<article class="gallery-tile rounded-4 p-4 h-100 w-100" [class]="'gallery-tile rounded-4 p-4 h-100 w-100 ' + tile.tint">
+						<p class="small text-uppercase fw-semibold mb-2">Photo Moment</p>
+						<h2 class="h4 mb-2">{{ tile.title }}</h2>
+						<p class="mb-0">{{ tile.caption }}</p>
+					</article>
+				</div>
+			}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,31 @@
+.gallery-header {
+	background:
+		radial-gradient(circle at 15% 18%, rgba(111, 66, 193, 0.16), transparent 45%),
+		radial-gradient(circle at 80% 24%, rgba(13, 110, 253, 0.16), transparent 50%),
+		linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.gallery-hero {
+	background: linear-gradient(125deg, #6f42c1, #0d6efd);
+	box-shadow: 0 1rem 2.4rem rgba(111, 66, 193, 0.24);
+}
+
+.header-kicker {
+	letter-spacing: 0.08em;
+}
+
+.hero-copy {
+	max-width: 64ch;
+}
+
+.gallery-tile {
+	border: 1px solid rgba(33, 37, 41, 0.08);
+	box-shadow: 0 0.8rem 1.8rem rgba(33, 37, 41, 0.08);
+}
+
+.tile-a { background: linear-gradient(180deg, rgba(13, 110, 253, 0.12), rgba(13, 110, 253, 0.22)); }
+.tile-b { background: linear-gradient(180deg, rgba(25, 135, 84, 0.12), rgba(25, 135, 84, 0.22)); }
+.tile-c { background: linear-gradient(180deg, rgba(253, 126, 20, 0.12), rgba(253, 126, 20, 0.22)); }
+.tile-d { background: linear-gradient(180deg, rgba(13, 202, 240, 0.12), rgba(13, 202, 240, 0.22)); }
+.tile-e { background: linear-gradient(180deg, rgba(255, 193, 7, 0.12), rgba(255, 193, 7, 0.22)); }
+.tile-f { background: linear-gradient(180deg, rgba(220, 53, 69, 0.12), rgba(220, 53, 69, 0.22)); }

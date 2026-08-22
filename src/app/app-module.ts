@@ -17,6 +17,7 @@ import { VolunteerComponent } from './components/volunteer/volunteer.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { RootComponent } from './components/root/root.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RootComponent } from './components/root/root.component';
     GalleryComponent,
     ContactComponent,
     RootComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
