@@ -29,6 +29,17 @@
 	color: rgba(248, 250, 252, 0.92);
 }
 
+.nav-more-toggle {
+	background: transparent;
+	border: 0;
+	line-height: 1.5;
+}
+
+.nav-more-toggle::after {
+	content: ' ▾';
+	font-size: 0.85em;
+}
+
 .nav-link.active {
 	background-color: rgba(250, 204, 21, 0.22);
 	color: #ffffff;
@@ -39,4 +50,20 @@
 .navbar-brand:hover,
 .navbar-brand:focus-visible {
 	color: #fde68a;
+}
+
+.dropdown-menu {
+	background: #111827;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.35);
+}
+
+.dropdown-item {
+	color: rgba(248, 250, 252, 0.92);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus-visible {
+	background: rgba(250, 204, 21, 0.2);
+	color: #ffffff;
 }

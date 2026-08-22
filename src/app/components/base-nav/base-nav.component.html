@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark base-nav-dark sticky-top">
 	<div class="container-fluid nav-shell">
-		<a class="navbar-brand fw-semibold d-inline-flex align-items-center gap-2" routerLink="/home" (click)="closeNav()">
+		<a class="navbar-brand fw-semibold d-inline-flex align-items-center gap-2" routerLink="/" (click)="closeNav()">
 			<img
 				ngSrc="/favicon.jpg"
 				width="32"
@@ -24,18 +24,41 @@
 
 		<div class="collapse navbar-collapse" id="baseNavMenu" [class.show]="isNavExpanded">
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-				@for (item of navItems; track item.path) {
-					<li class="nav-item">
-						<a
-							class="nav-link"
-							[routerLink]="item.path"
-							routerLinkActive="active"
-							[routerLinkActiveOptions]="{ exact: item.exact }"
-							(click)="closeNav()"
-						>
-							{{ item.label }}
-						</a>
-					</li>
+				@for (item of navItems; track item.label) {
+					@if (item.children) {
+						<li class="nav-item dropdown" [class.show]="isMoreOpen">
+							<button
+								type="button"
+								class="nav-link nav-more-toggle"
+								[class.active]="hasActiveChild(item.children)"
+								aria-expanded="{{ isMoreOpen }}"
+								(click)="toggleMore()"
+							>
+								{{ item.label }}
+							</button>
+							<ul class="dropdown-menu dropdown-menu-end" [class.show]="isMoreOpen">
+								@for (child of item.children; track child.route) {
+									<li>
+										<a class="dropdown-item" [routerLink]="child.route" (click)="closeNav()">
+											{{ child.label }}
+										</a>
+									</li>
+								}
+							</ul>
+						</li>
+					} @else {
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								[routerLink]="item.route"
+								routerLinkActive="active"
+								[routerLinkActiveOptions]="{ exact: item.route === '/' }"
+								(click)="closeNav()"
+							>
+								{{ item.label }}
+							</a>
+						</li>
+					}
 				}
 			</ul>
 		</div>

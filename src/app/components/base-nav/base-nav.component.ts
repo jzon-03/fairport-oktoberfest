@@ -1,10 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
-type NavItem = {
+export interface NavItem {
   label: string;
-  path: string;
-  exact: boolean;
-};
+  route: string;
+  icon?: string;
+  children?: NavItem[];
+}
+
+export const navItems: NavItem[] = [
+  { label: 'Home', route: '/' },
+  { label: 'Schedule', route: '/schedule' },
+  { label: 'Entertainment', route: '/entertainment' },
+  { label: 'Food & Drink', route: '/food-drink' },
+  { label: 'Vendors', route: '/vendors' },
+  { label: 'Activities', route: '/activities' },
+  { label: 'About', route: '/about' },
+  {
+    label: 'More',
+    route: '',
+    children: [
+      { label: 'Location', route: '/location' },
+      { label: 'Sponsors', route: '/sponsors' },
+      { label: 'Volunteer', route: '/volunteer' },
+      { label: 'Gallery', route: '/gallery' },
+      { label: 'Contact', route: '/contact' },
+    ],
+  },
+];
 
 @Component({
   selector: 'app-base-nav',
@@ -13,28 +36,31 @@ type NavItem = {
   styleUrl: './base-nav.component.css',
 })
 export class BaseNavComponent {
-  protected readonly navItems: NavItem[] = [
-    { label: 'Home', path: '/home', exact: true },
-    { label: 'Schedule', path: '/schedule', exact: false },
-    { label: 'Entertainment', path: '/entertainment', exact: false },
-    { label: 'Food & Drink', path: '/food-drink', exact: false },
-    { label: 'Vendors', path: '/vendors', exact: false },
-    { label: 'Activities', path: '/activities', exact: false },
-    { label: 'About', path: '/about', exact: false },
-    { label: 'Location', path: '/location', exact: false },
-    { label: 'Sponsors', path: '/sponsors', exact: false },
-    { label: 'Volunteer', path: '/volunteer', exact: false },
-    { label: 'Gallery', path: '/gallery', exact: false },
-    { label: 'Contact', path: '/contact', exact: false },
-  ];
+  private readonly router = inject(Router);
+
+  protected readonly navItems = navItems;
 
   protected isNavExpanded = false;
+  protected isMoreOpen = false;
 
   protected toggleNav(): void {
     this.isNavExpanded = !this.isNavExpanded;
+    if (!this.isNavExpanded) {
+      this.isMoreOpen = false;
+    }
+  }
+
+  protected toggleMore(): void {
+    this.isMoreOpen = !this.isMoreOpen;
   }
 
   protected closeNav(): void {
     this.isNavExpanded = false;
+    this.isMoreOpen = false;
+  }
+
+  protected hasActiveChild(children: NavItem[]): boolean {
+    const currentPath = this.router.url.split('?')[0];
+    return children.some((child) => currentPath === child.route || currentPath.startsWith(`${child.route}/`));
   }
 }
