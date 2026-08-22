@@ -1,0 +1,47 @@
+.vendors-header {
+	background:
+		radial-gradient(circle at 15% 18%, rgba(13, 110, 253, 0.18), transparent 45%),
+		radial-gradient(circle at 82% 24%, rgba(255, 193, 7, 0.18), transparent 50%),
+		linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.vendors-hero {
+	background: linear-gradient(125deg, #0d6efd, #fd7e14);
+	box-shadow: 0 1rem 2.4rem rgba(13, 110, 253, 0.24);
+}
+
+.hero-kicker {
+	letter-spacing: 0.08em;
+}
+
+.hero-copy {
+	max-width: 68ch;
+}
+
+.category-block {
+	border: 1px solid rgba(33, 37, 41, 0.08);
+	background: #ffffff;
+	box-shadow: 0 0.6rem 1.6rem rgba(33, 37, 41, 0.06);
+}
+
+.vendor-card {
+	border: 1px solid rgba(13, 110, 253, 0.14);
+	background: linear-gradient(180deg, #ffffff, #f8fbff);
+	transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.vendor-card:hover,
+.vendor-card:focus-within {
+	transform: translateY(-4px);
+	box-shadow: 0 1rem 2.2rem rgba(33, 37, 41, 0.12) !important;
+}
+
+.vendor-area {
+	font-weight: 600;
+	color: #0d6efd;
+}
+
+.note-panel {
+	border: 1px solid rgba(13, 110, 253, 0.18);
+	background: linear-gradient(180deg, #ffffff, #f6f9ff);
+}
