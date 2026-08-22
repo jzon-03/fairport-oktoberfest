@@ -18,19 +18,19 @@ const routes: Routes = [
   {
     path: '', component: RootComponent,
     children: [
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
-      {path: 'home', component: HomeComponent},
-      {path: 'schedule', component: ScheduleComponent},
-      {path: 'entertainment', component: EntertainmentComponent},
-      {path: 'food-drink', component: FoodDrinkComponent},
-      {path: 'vendors', component: VendorsComponent},
-      {path: 'activities', component: ActivitiesComponent},
-      {path: 'about', component: AboutComponent},
-      {path: 'location', component: LocationComponent},
-      {path: 'sponsors', component: SponsorsComponent},
-      {path: 'volunteer', component: VolunteerComponent},
-      {path: 'gallery', component: GalleryComponent},
-      {path: 'contact', component: ContactComponent},
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'home', component: HomeComponent },
+      { path: 'schedule', component: ScheduleComponent },
+      { path: 'entertainment', component: EntertainmentComponent },
+      { path: 'food-drink', component: FoodDrinkComponent },
+      { path: 'vendors', component: VendorsComponent },
+      { path: 'activities', component: ActivitiesComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'location', component: LocationComponent },
+      { path: 'sponsors', component: SponsorsComponent },
+      { path: 'volunteer', component: VolunteerComponent },
+      { path: 'gallery', component: GalleryComponent },
+      { path: 'contact', component: ContactComponent },
     ]
   }
 ];
