@@ -13,6 +13,15 @@
 	color: #f8fafc;
 }
 
+.brand-logo {
+	width: 2rem;
+	height: 2rem;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.45);
+	box-shadow: 0 0.25rem 0.7rem rgba(0, 0, 0, 0.25);
+}
+
 .nav-link {
 	font-weight: 500;
 	border-radius: 0.5rem;

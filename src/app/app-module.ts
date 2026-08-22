@@ -1,4 +1,5 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
@@ -40,6 +41,7 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    NgOptimizedImage,
     AppRoutingModule
   ],
   providers: [

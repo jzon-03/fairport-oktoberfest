@@ -1,6 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark base-nav-dark sticky-top">
 	<div class="container-fluid nav-shell">
-		<a class="navbar-brand fw-semibold" routerLink="/home" (click)="closeNav()">Fairport Oktoberfest</a>
+		<a class="navbar-brand fw-semibold d-inline-flex align-items-center gap-2" routerLink="/home" (click)="closeNav()">
+			<img
+				ngSrc="/favicon.jpg"
+				width="32"
+				height="32"
+				alt="Fairport Oktoberfest logo"
+				class="brand-logo"
+			/>
+			<span>Fairport Oktoberfest</span>
+		</a>
 
 		<button
 			class="navbar-toggler"

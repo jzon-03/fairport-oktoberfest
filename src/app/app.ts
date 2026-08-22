@@ -7,7 +7,7 @@ import { SeoService } from './services/seo.service';
   standalone: false,
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit {
   private readonly seoService = inject(SeoService);
 
   protected readonly title = signal('fairport-oktoberfest');
