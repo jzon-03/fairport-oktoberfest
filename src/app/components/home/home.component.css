@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
 .hero-wrap {
 	background:
 		radial-gradient(circle at 10% 10%, rgba(255, 193, 7, 0.18), transparent 45%),
@@ -19,6 +21,71 @@
 
 .hero-copy {
 	max-width: 62ch;
+}
+
+.hero-title {
+	font-size: clamp(3rem, 8vw, 6.75rem);
+	font-weight: 900;
+	line-height: 0.95;
+	letter-spacing: 0.02em;
+	text-wrap: balance;
+}
+
+.hero-title-art {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 0.55rem;
+	row-gap: 0.15rem;
+}
+
+.hero-word {
+	display: inline-flex;
+}
+
+.hero-letter {
+	display: inline-block;
+	padding-inline: 0.015em;
+	text-shadow: 0 0.24rem 0.7rem rgba(0, 0, 0, 0.35);
+	transition: transform 220ms ease, color 220ms ease;
+	animation: letterFloat 2.8s ease-in-out infinite;
+}
+
+.hero-letter:nth-child(odd) {
+	transform: translateY(-0.03em) rotate(-2.5deg);
+}
+
+.hero-letter:nth-child(even) {
+	transform: translateY(0.03em) rotate(2.5deg);
+}
+
+.hero-word:first-child .hero-letter {
+	color: #fff7cc;
+}
+
+.hero-word:last-child .hero-letter {
+	color: #d1ecff;
+}
+
+.hero-letter-fraktur {
+	font-family: 'UnifrakturCook', 'Old English Text MT', serif;
+	font-size: 1.14em;
+	line-height: 0.86;
+}
+
+.hero-title:hover .hero-letter,
+.hero-title:focus-within .hero-letter {
+	transform: translateY(-0.08em) scale(1.05);
+	color: #ffffff;
+}
+
+@keyframes letterFloat {
+	0%,
+	100% {
+		translate: 0 0;
+	}
+	50% {
+		translate: 0 -0.08em;
+	}
 }
 
 .feature-overlap {
@@ -83,6 +150,11 @@
 @media (max-width: 575.98px) {
 	.quick-info-heading {
 		align-items: flex-start !important;
+	}
+
+	.hero-title {
+		font-size: clamp(2.4rem, 12vw, 3.8rem);
+		line-height: 1;
 	}
 
 	.quick-info-illustration {
