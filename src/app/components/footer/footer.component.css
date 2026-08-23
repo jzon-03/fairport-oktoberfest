@@ -1,8 +1,26 @@
 .site-footer {
 	background:
-		linear-gradient(135deg, rgba(13, 110, 253, 0.96), rgba(102, 16, 242, 0.95)),
-		linear-gradient(180deg, #0b5ed7, #6610f2);
+		linear-gradient(180deg, rgba(11, 18, 32, 0.82), rgba(11, 18, 32, 0.86)),
+		url('/images/banner.png') center/cover no-repeat;
+	background-attachment: scroll;
 	color: #f8f9fa;
+	position: relative;
+	overflow: hidden;
+}
+
+.site-footer::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(135deg, rgba(13, 110, 253, 0.12), rgba(250, 204, 21, 0.08));
+	pointer-events: none;
+	mix-blend-mode: screen;
+	opacity: 0.55;
+}
+
+.site-footer > .container-xl {
+	position: relative;
+	z-index: 1;
 }
 
 .footer-copy {

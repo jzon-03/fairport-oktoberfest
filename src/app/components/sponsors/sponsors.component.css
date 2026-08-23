@@ -2,7 +2,8 @@
 	background:
 		radial-gradient(circle at 14% 20%, rgba(25, 135, 84, 0.18), transparent 44%),
 		radial-gradient(circle at 80% 24%, rgba(13, 110, 253, 0.16), transparent 50%),
-		linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+		linear-gradient(180deg, rgba(248, 249, 250, 0.7) 0%, rgba(255, 255, 255, 0.45) 100%),
+		url('/images/Header-banner.png') center/cover no-repeat;
 }
 
 .sponsors-hero {
