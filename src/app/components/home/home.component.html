@@ -28,6 +28,15 @@
 						[class.card-yellow]="i === 2"
 					>
 						<div class="card-body p-4 d-flex flex-column">
+							<div class="card-illustration-wrap mb-3">
+								<img
+									[ngSrc]="card.image"
+									width="72"
+									height="72"
+									[alt]="card.imageAlt"
+									class="card-illustration"
+								/>
+							</div>
 							<h2 class="h4 card-title mb-2">{{ card.title }}</h2>
 							<p class="card-text text-body-secondary mb-4">{{ card.description }}</p>
 							<a class="btn btn-outline-primary mt-auto align-self-start" [routerLink]="card.route">{{ card.cta }}</a>
@@ -38,7 +47,16 @@
 		</div>
 
 		<div class="mt-5 p-4 p-lg-5 rounded-4 quick-info">
-			<h2 class="h3 mb-3">Quick Event Info</h2>
+			<div class="d-flex align-items-center justify-content-between gap-3 mb-3 quick-info-heading">
+				<h2 class="h3 mb-0">Quick Event Info</h2>
+				<img
+					ngSrc="/images/beer2.png"
+					width="72"
+					height="72"
+					alt="Beer stein illustration"
+					class="quick-info-illustration"
+				/>
+			</div>
 			<div class="row g-3">
 				<div class="col-12 col-md-4">
 					<p class="mb-1 fw-semibold">Where</p>

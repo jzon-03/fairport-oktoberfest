@@ -5,6 +5,8 @@ type Highlight = {
   description: string;
   route: string;
   cta: string;
+  image: string;
+  imageAlt: string;
 };
 
 @Component({
@@ -20,18 +22,24 @@ export class HomeComponent {
       description: 'Polka bands, local favorites, and family-friendly performances all weekend long.',
       route: '/entertainment',
       cta: 'See Entertainment',
+      image: '/images/dress.png',
+      imageAlt: 'Traditional festival dress illustration',
     },
     {
       title: 'German Food & Drinks',
       description: 'Bratwurst, pretzels, schnitzel, and seasonal craft beverages from regional partners.',
       route: '/food-drink',
       cta: 'Explore Menu',
+      image: '/images/beer.png',
+      imageAlt: 'Beer mug illustration',
     },
     {
       title: 'Plan Your Visit',
       description: 'Get parking details, venue maps, and schedules so your group can make the most of the day.',
       route: '/location',
       cta: 'Get Directions',
+      image: '/images/hat.png',
+      imageAlt: 'Traditional Oktoberfest hat illustration',
     },
   ];
 }

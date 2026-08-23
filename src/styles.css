@@ -26,7 +26,7 @@ app-root {
 .slot-row,
 .drink-row,
 .tip-row {
-	background: linear-gradient(180deg, #1f2937, #111827) !important;
+	background: linear-gradient(180deg, #1f2937af, #111827) !important;
 	border-color: rgba(148, 163, 184, 0.32) !important;
 	color: #e5e7eb;
 }
