@@ -19,19 +19,19 @@ export class ContactComponent {
       title: 'General Questions',
       detail: 'Questions about schedule, admissions, and festival operations.',
       actionLabel: 'Email Organizers',
-      actionHref: 'mailto:info@fairportoktoberfest.thepracticalapps.com',
+      actionHref: 'mailto:info@fairportoktoberfest.guevarrastudio.com',
     },
     {
       title: 'Volunteer Interest',
       detail: 'Get connected with volunteer coordination and shift opportunities.',
       actionLabel: 'Volunteer Inquiry',
-      actionHref: 'mailto:volunteer@fairportoktoberfest.thepracticalapps.com',
+      actionHref: 'mailto:volunteer@fairportoktoberfest.guevarrastudio.com',
     },
     {
       title: 'Vendor & Sponsor Requests',
       detail: 'Booth, partnership, and community support inquiries.',
       actionLabel: 'Partnership Inquiry',
-      actionHref: 'mailto:partners@fairportoktoberfest.thepracticalapps.com',
+      actionHref: 'mailto:partners@fairportoktoberfest.guevarrastudio.com',
     },
   ];
 

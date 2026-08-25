@@ -13,7 +13,7 @@ export class SeoService {
   private readonly document = inject(DOCUMENT);
 
   private readonly siteName = 'Fairport Oktoberfest';
-  private readonly siteUrl = 'https://fairportoktoberfest.thepracticalapps.com';
+  private readonly siteUrl = 'https://fairportoktoberfest.guevarrastudio.com';
   private readonly defaultDescription =
     'Official Fairport Oktoberfest site with schedule, entertainment, food, activities, location details, and festival updates.';
 

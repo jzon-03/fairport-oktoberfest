@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fairportoktoberfest.thepracticalapps.com/sitemap.xml
+Sitemap: https://fairportoktoberfest.guevarrastudio.com/sitemap.xml
